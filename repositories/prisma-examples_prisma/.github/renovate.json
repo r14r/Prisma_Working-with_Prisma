@@ -1,0 +1,20 @@
+{
+  "extends": ["config:base", "docker:disable"],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "masterIssue": true,
+  "baseBranches": ["latest"],
+  "packageRules": [
+    {
+      "baseBranchList": ["latest"],
+      "packageNames": ["nexus-prisma"],
+      "enabled": false
+    }
+  ],
+  "ignoreDeps": [
+    "@prisma/cli",
+    "@prisma/client"
+  ]
+}
